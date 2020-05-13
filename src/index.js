@@ -27,13 +27,8 @@ const onChange = () => {
 
 countStore.subscribe(onChange);
 
-const handleAdd = () => {
-  countStore.dispatch({ type: ADD });
-};
-
-const handleMinus = () => {
-  countStore.dispatch({ type: MINUS });
-};
+const handleAdd = () => countStore.dispatch({ type: ADD });
+const handleMinus = () => countStore.dispatch({ type: MINUS });
 
 add.addEventListener('click', handleAdd);
 minus.addEventListener('click', handleMinus);
